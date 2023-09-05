@@ -1,0 +1,26 @@
+.slider_container {
+	width: 80vw;
+	height: 70vh;
+	margin: 100px auto
+}
+
+.text {
+	width: 20%;
+	height: 10%;
+	font-size: 33px;
+	position: absolute;
+	left: 10%;
+	top: 90%;
+	cursor: pointer;
+	text-decoration: none;
+	
+}
+
+.link {
+	position: absolute;
+	left: 80%;
+	top: 90%;
+	font-size: 20px;
+	color: #A18A68;
+	text-decoration: none;
+}

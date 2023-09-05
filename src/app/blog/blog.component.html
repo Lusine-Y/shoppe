@@ -1,0 +1,34 @@
+<div class="container">
+	
+<div class="leftcolumn">
+ <div class="upperColumn">
+  <div style="font-size: 33px; font-weight: 500;">Blog</div>
+  <div><input type="search" placeholder="Search..."></div>
+ </div>
+
+<br><br><br>
+
+
+<div class="lowerColumn">
+  <div style="font-size: 20px; font-weight: 500;">Categories</div> <br>
+  <div class="category">Fashion</div>
+  <div class="category">Style</div>
+  <div class="category">Accessories</div>
+  <div class="category">Season</div>
+</div>
+
+</div>	
+
+<div class="rightColumn" fxLayout="row wrap" fxLayoutGap="25px">
+<div *ngFor="let trend of trends" class="cards" >
+	<img src="{{trend.imageUrl}}" alt="jewelry">
+	<div style="font-size: 14px;font-weight: 400; color:#707070">{{trend.fashionSeason}}</div>
+	<div style="font-size: 20px;font-weight: 400; color:black">{{trend.topTrends}}</div>
+	<div style="font-size: 16px;font-weight: 400; color:#707070">{{trend.information}}</div>
+	<div style="font-size: 16px;font-weight: 700; color:#A18A68">Read More</div>
+</div>
+
+</div>
+
+
+</div>

@@ -1,0 +1,58 @@
+<div class="container" [formGroup]="filter">
+
+	<div class="leftColumn">
+<div><a routerLink="">Shop The Latest </a></div>
+<div class="form" [formGroup]="filter">
+ 
+
+	 <input
+	 type="text"
+	 formControlName="search"
+	 placeholder="Search..."
+	 class="search"
+	 />
+
+
+  <select formControlName="sortBy" name="Sort By" class="sortBy" id="sort">
+    <option default>Sort By</option>
+    <option *ngFor="let item of sortByItems" [value]="item">{{ item }}</option>
+  </select>
+
+
+  <!--<input type="range" formControlName="rangeTo" />
+  <input type="range" formControlName="rangeFrom" />-->
+  <div class="checkItem">
+    <span class="check">On Sale</span>
+      <input
+        type="checkbox"
+        formControlName="onSale"
+        name="onSale"
+        class="onSale"
+    
+      />
+		</div>
+    
+    <br />
+    <div class="row2">
+      <label for="inStock"> In Stock</label>
+      <input
+        type="checkbox"
+        formControlName="inStock"
+        name="inStock"
+        class="inStock"
+      />
+    </div>
+  </div>
+
+
+<div><button type="submit" (click)="submit()" class="btn">Search</button></div>
+
+</div>
+
+
+<div class="rightColumn">
+<app-card [products]="products" class="content"></app-card>
+
+</div>
+
+</div>

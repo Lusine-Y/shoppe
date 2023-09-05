@@ -1,0 +1,267 @@
+<ng-template #notFoundPage>
+  <h1>Product not found!</h1>
+</ng-template>
+
+<div class="container" *ngIf="product; else notFoundPage">
+  <div class="firstSection">
+    <div class="leftSide" >
+      <div class="leftColumn">
+				<div *ngFor="let image of product.images">
+        <img 
+				class="image"
+          src="{{ image }}"
+          alt="earings"
+          class="image"
+          width="100px"
+          height="100px"
+					(click)="setMainImageUrl(image)"
+        />
+        </div>
+			</div>
+      <div>
+        <img
+				  class="image"
+          src="{{ mainImageUrl }}"
+          alt="earings"
+          class="image"
+          width="500px"
+          height="500px"
+        />
+      </div>
+    </div>
+
+    <div class="rightSide">
+      <div class="name">{{ product.name }}</div>
+      <div class="price">$ {{ product.price }}</div>
+      <div style="font-size: 16px; color: #707070">
+        1 customer review </div>
+        <div style="font-size: 16px; color: #707070">
+          {{ product.Description }}
+        </div>
+
+      <div class="cart">
+        <div class="count">
+          <button
+            id="plus"
+            (click)="product.num = (product.num || 1) + 1"
+            class="plus"
+          >
+            +
+          </button>
+          <span class="number"> {{ product.num || 1 }}</span>
+          <button
+            id="minus"
+            (click)="
+              product.num = product.num && product.num > 1 ? product.num - 1 : 1
+            "
+            class="minus"
+          >
+            -
+          </button>
+        </div>
+        <button
+          class="addToCart"
+          (click)="addToCart(product)"
+          [disabled]="product.num === 0"
+        >
+          ADD TO CART
+        </button>
+      </div>
+      <div>
+        <div class="icons">
+          <span class="heart"
+            ><img
+              src="assets/images/heart.png"
+              alt="heart"
+              width="20px"
+              height="20px"
+          /></span>
+          <span
+            ><img
+              src="assets/images/Line 3.png"
+              alt="line"
+              width="2px"
+              height="19,6px"
+              rotation="-90"
+          /></span>
+          <span
+            ><a href="https://www.gmail.com/"
+              ><img
+                src="assets/images/gmail.png"
+                alt="gmail"
+                width="21px"
+                height="16px" /></a
+          ></span>
+          <span
+            ><a href="https://www.facebook.com/"
+              ><img
+                src="assets/images/facebook.png"
+                alt="mail"
+                width="10px"
+                height="17px" /></a
+          ></span>
+          <span
+            ><a href="https://www.instagram.com/"
+              ><img
+                src="assets/images/instagram.png"
+                alt="mail"
+                width="18px"
+                height="17px" /></a
+          ></span>
+          <span
+            ><a href="https://www.twitter.com/"
+              ><img
+                src="assets/images/twitter.png"
+                alt="mail"
+                width="20px"
+                height="16px" /></a
+          ></span>
+        </div>
+        
+<br>
+        <div style="font-size: 16px; color: #707070; width: 20%; font-weight: 400">
+          <span style="font-size: 16px; font-weight: 400; color: black">SKU:</span>
+          {{ product.SKU }}
+        </div>
+      </div>
+      <div style="font-size: 16px; color: #707070; width: 20%; font-weight: 400">
+        <span style="font-size: 16px; font-weight: 400; color: black">Categories:</span>
+        {{ product.Categories }}
+			</div>
+    </div>
+  </div>
+<br>
+
+  <div class="secondSection">
+    <div class="container1">
+      <button (click)="tab = 1" class="btn">Description</button>
+      <button (click)="tab = 2" class="btn">Additional Information</button>
+      <button (click)="tab = 3" class="btn">Reviews(0)</button>
+
+      <br><br><br>
+      
+
+      <div *ngIf="tab === 1" class="text">
+        <div>{{ product.Description }}</div>
+      </div>
+
+      <div *ngIf="tab === 2">
+        <div style="font-size: 16px; color: #707070">
+          <span style="font-size: 16px; font-weight: 400; color: black">Weight:</span>
+          {{ product.additionalInformation.weight }}
+        </div>
+        <br />
+        <div style="font-size: 16px; color: #707070">
+          <span style="font-size: 16px; font-weight: 400; color: black">Dimensions:</span>
+          {{ product.additionalInformation.dimensions }}
+        </div>
+        <br />
+        <div style="font-size: 16px; color: #707070">
+          <span style="font-size: 16px; font-weight: 400; color: black">Colors:</span>
+          {{ product.additionalInformation.colors }}
+        </div>
+        <br />
+        <div style="font-size: 16px; color: #707070">
+          <span style="font-size: 16px; font-weight: 400; color: black">Material:</span>
+          {{ product.additionalInformation.material }}
+        </div>
+      </div>
+
+      <div *ngIf="tab === 3">
+        <div class="box">
+          <div>
+            <div *ngFor="let review of product.reviews" class="reviews">
+              <div class="firstRow">
+                <span style="font-size: 20px; font-weight: 400">
+                  {{ review.name }}</span
+                >
+                <span
+                  style="font-size: 14px; font-weight: 400; color: #707070"
+                  >{{ review.date }}</span
+                >
+              </div>
+              <p>{{ review.stars }}</p>
+              <p style="font-size: 16px; font-weight: 400; color: #707070">
+                {{ review.text }}
+              </p>
+
+
+              <div class="firstRow">
+                <span style="font-size: 20px; font-weight: 400">
+                  {{ review.name }}</span
+                >
+                <span
+                  style="font-size: 14px; font-weight: 400; color: #707070"
+                  >{{ review.date }}</span
+                >
+              </div>
+              <p>{{ review.stars }}</p>
+              <p style="font-size: 16px; font-weight: 400; color: #707070">
+                {{ review.text }}
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="review">
+          <div style="font-size: 20px; color: black; font-weight: 400">
+            Add a Review
+          </div>
+          <div style="font-size: 13px; color: #707070">
+            Your Email Address Will Not Be Published.Required Fields Are
+            Marked*.
+          </div>
+          <div class="reviewInput" style="font-size: 13px; color: #707070">
+            Your Review*
+          </div>
+          <input type="review" class="reviewInput" />
+          <div>
+            <input
+              type="name"
+              placeholder="Enter your name*"
+              class="nameInput"
+            />
+          </div>
+
+          <div>
+            <input
+              type="email"
+              placeholder="Enter your Email*"
+              class="emailInput"
+            />
+          </div>
+
+          <div style="font-size: 12px; color: #707070">
+            <input type="checkbox" /> Save my name, email, and website in this
+            browser for the next time I comment
+          </div>
+          <div style="font-size: 14px; color: #707070">
+            Your Rating*
+           
+          </div>
+
+          <div><input type="submit" class="submit" /></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="thirdSection">
+    <div style="font-size: 26px; font-weight: 400">Similar Items</div>
+    
+<div class="similarItems">
+    <div *ngFor="let similarItemId of product.similarItemIds">
+      <div class="card">
+			<img
+        src="{{ getProductById(similarItemId)?.imageUrl }}"
+        alt="jewelry"
+				width="350px" height="350px"
+        [routerLink]="['/products', similarItemId]"
+      />
+			<h2>{{getProductById(similarItemId)?.name}}</h2>
+			<p>$  {{getProductById(similarItemId)?.price}}</p>
+		</div>
+    </div>
+	</div>
+  </div>
+</div>

@@ -1,0 +1,63 @@
+.slide {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  background-size: cover;
+  background-position: center;
+}
+
+
+.slider {
+  position: relative;
+  height: 100%;
+}
+
+.dotsContainer {
+  display: flex;
+  justify-content: center;
+	position: absolute;
+	top: 90%;
+	left: 50%;
+
+}
+
+.dot {
+  margin: 0 3px;
+  cursor: pointer;
+  font-size: 20px;
+	color: white;
+}
+
+
+.btn {
+	position: absolute;
+	left: 3%;
+	top: 60%;
+  background-color: transparent;
+	color: white;
+	outline: white;
+	border: solid 2px white;
+	width: 193px;
+	height: 53px;
+	border-radius: 6px;
+	font-size: 20px;
+	background-color: none;
+	cursor: pointer;
+}
+
+.name{
+font-size: 33px;
+color: white;
+position: absolute;
+top: 40%;
+left: 3%;
+}
+
+.price {
+	font-size: 26px;
+	color: white;
+	position: absolute;
+	top: 50%;
+	left: 3%;
+
+}

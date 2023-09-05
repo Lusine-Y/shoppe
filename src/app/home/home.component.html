@@ -1,0 +1,28 @@
+<div class="cart">
+  <img
+    src="assets/images/shopping-cart.png"
+    alt="cart"
+    width="30px"
+    height="30px"
+  /> {{updateCartIcon.length}}
+</div>
+
+<div class="slider_container">
+  <image-slider></image-slider>
+</div>
+
+
+<div class="container">
+<div class="firstRow">
+  <a
+    class="text"
+    routerLink="/shop"
+    >Shop The Latest</a>
+  <button class="link" (click) = "viewAll()" (click) = "viewAllViewLessRule()">{{status}}</button>
+</div>
+
+<div class="cardContainer">
+<app-card [products]="products"></app-card>
+</div>
+
+</div>

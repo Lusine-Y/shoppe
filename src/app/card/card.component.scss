@@ -1,0 +1,85 @@
+
+
+.price {
+	font-size: 20px;
+	color: #A18A68;
+	text-decoration: none;
+}
+
+.image {
+	cursor: pointer;
+
+}
+
+.image:hover {
+	opacity: 0.2;
+	transition: 0.5s ease-in-ease-out;
+}
+
+
+mat-card-actions {
+	display: none;
+	position: absolute;
+	top: 40%;
+	left: 30%;
+
+}
+
+mat-card:hover mat-card-actions {
+	display: inline-block;
+}
+
+
+.box {
+	display: flex;
+	column-gap: 40px;
+}
+
+.custom-icon {
+	color: #FFFFFF;
+
+}
+
+
+.heart-icon {
+	font-size: 35px;
+	width: 40px;
+	height: 40px;
+	color: grey;
+	transition: color 0.3s ease;
+	cursor: pointer;
+
+	&.liked {
+		color: red;
+	}
+}
+
+.cart-icon {
+	font-size: 35px;
+	width: 40px;
+	height: 40px;
+	color: grey;
+	transition: color 0.3s ease;
+	cursor: pointer;
+
+	&.added {
+		color: black;
+	}
+};
+
+.eye-icon {
+
+cursor: pointer;
+font-size: 35px;
+	width: 40px;
+	height: 40px;
+	color: grey;
+}
+
+.no-border{
+
+	border: none;
+  box-shadow: none;
+	margin-bottom: 15%;
+}
+
