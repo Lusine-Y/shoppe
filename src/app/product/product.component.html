@@ -1,26 +1,22 @@
-<ng-template #notFoundPage>
-  <h1>Product not found!</h1>
-</ng-template>
-
 <div class="container" *ngIf="product; else notFoundPage">
   <div class="firstSection">
-    <div class="leftSide" >
+    <div class="leftSide">
       <div class="leftColumn">
-				<div *ngFor="let image of product.images">
-        <img 
-				class="image"
-          src="{{ image }}"
-          alt="earings"
-          class="image"
-          width="100px"
-          height="100px"
-					(click)="setMainImageUrl(image)"
-        />
+        <div *ngFor="let image of product.images">
+          <img
+            class="image"
+            src="{{ image }}"
+            alt="earings"
+            class="image"
+            width="100px"
+            height="100px"
+            (click)="setMainImageUrl(image)"
+          />
         </div>
-			</div>
+      </div>
       <div>
         <img
-				  class="image"
+          class="image"
           src="{{ mainImageUrl }}"
           alt="earings"
           class="image"
@@ -33,11 +29,10 @@
     <div class="rightSide">
       <div class="name">{{ product.name }}</div>
       <div class="price">$ {{ product.price }}</div>
+      <div style="font-size: 16px; color: #707070">1 customer review</div>
       <div style="font-size: 16px; color: #707070">
-        1 customer review </div>
-        <div style="font-size: 16px; color: #707070">
-          {{ product.Description }}
-        </div>
+        {{ product.Description }}
+      </div>
 
       <div class="cart">
         <div class="count">
@@ -73,6 +68,8 @@
             ><img
               src="assets/images/heart.png"
               alt="heart"
+              [ngClass]="{ liked: product.liked }"
+              (click)="[(product.liked = !product.liked)]"
               width="20px"
               height="20px"
           /></span>
@@ -117,20 +114,28 @@
                 height="16px" /></a
           ></span>
         </div>
-        
-<br>
-        <div style="font-size: 16px; color: #707070; width: 20%; font-weight: 400">
-          <span style="font-size: 16px; font-weight: 400; color: black">SKU:</span>
+
+        <br />
+        <div
+          style="font-size: 16px; color: #707070; width: 20%; font-weight: 400"
+        >
+          <span style="font-size: 16px; font-weight: 400; color: black"
+            >SKU:</span
+          >
           {{ product.SKU }}
         </div>
       </div>
-      <div style="font-size: 16px; color: #707070; width: 20%; font-weight: 400">
-        <span style="font-size: 16px; font-weight: 400; color: black">Categories:</span>
+      <div
+        style="font-size: 16px; color: #707070; width: 20%; font-weight: 400"
+      >
+        <span style="font-size: 16px; font-weight: 400; color: black"
+          >Categories:</span
+        >
         {{ product.Categories }}
-			</div>
+      </div>
     </div>
   </div>
-<br>
+  <br />
 
   <div class="secondSection">
     <div class="container1">
@@ -138,8 +143,7 @@
       <button (click)="tab = 2" class="btn">Additional Information</button>
       <button (click)="tab = 3" class="btn">Reviews(0)</button>
 
-      <br><br><br>
-      
+      <br /><br /><br />
 
       <div *ngIf="tab === 1" class="text">
         <div>{{ product.Description }}</div>
@@ -147,22 +151,30 @@
 
       <div *ngIf="tab === 2">
         <div style="font-size: 16px; color: #707070">
-          <span style="font-size: 16px; font-weight: 400; color: black">Weight:</span>
+          <span style="font-size: 16px; font-weight: 400; color: black"
+            >Weight:</span
+          >
           {{ product.additionalInformation.weight }}
         </div>
         <br />
         <div style="font-size: 16px; color: #707070">
-          <span style="font-size: 16px; font-weight: 400; color: black">Dimensions:</span>
+          <span style="font-size: 16px; font-weight: 400; color: black"
+            >Dimensions:</span
+          >
           {{ product.additionalInformation.dimensions }}
         </div>
         <br />
         <div style="font-size: 16px; color: #707070">
-          <span style="font-size: 16px; font-weight: 400; color: black">Colors:</span>
+          <span style="font-size: 16px; font-weight: 400; color: black"
+            >Colors:</span
+          >
           {{ product.additionalInformation.colors }}
         </div>
         <br />
         <div style="font-size: 16px; color: #707070">
-          <span style="font-size: 16px; font-weight: 400; color: black">Material:</span>
+          <span style="font-size: 16px; font-weight: 400; color: black"
+            >Material:</span
+          >
           {{ product.additionalInformation.material }}
         </div>
       </div>
@@ -184,7 +196,6 @@
               <p style="font-size: 16px; font-weight: 400; color: #707070">
                 {{ review.text }}
               </p>
-
 
               <div class="firstRow">
                 <span style="font-size: 20px; font-weight: 400">
@@ -235,10 +246,7 @@
             <input type="checkbox" /> Save my name, email, and website in this
             browser for the next time I comment
           </div>
-          <div style="font-size: 14px; color: #707070">
-            Your Rating*
-           
-          </div>
+          <div style="font-size: 14px; color: #707070">Your Rating*</div>
 
           <div><input type="submit" class="submit" /></div>
         </div>
@@ -248,20 +256,26 @@
 
   <div class="thirdSection">
     <div style="font-size: 26px; font-weight: 400">Similar Items</div>
-    
-<div class="similarItems">
-    <div *ngFor="let similarItemId of product.similarItemIds">
-      <div class="card">
-			<img
-        src="{{ getProductById(similarItemId)?.imageUrl }}"
-        alt="jewelry"
-				width="350px" height="350px"
-        [routerLink]="['/products', similarItemId]"
-      />
-			<h2>{{getProductById(similarItemId)?.name}}</h2>
-			<p>$  {{getProductById(similarItemId)?.price}}</p>
-		</div>
+
+    <div class="similarItems">
+      <div *ngFor="let similarItemId of product.similarItemIds">
+        <div class="card">
+          <img
+            src="{{ getProductById(similarItemId)?.imageUrl }}"
+            alt="jewelry"
+            width="350px"
+            height="350px"
+            [routerLink]="['/products', similarItemId]"
+          />
+          <h2>{{ getProductById(similarItemId)?.name }}</h2>
+          <p>$ {{ getProductById(similarItemId)?.price }}</p>
+        </div>
+      </div>
     </div>
-	</div>
   </div>
 </div>
+
+<!--not found  template-->
+<ng-template #notFoundPage>
+  <h1>Product not found!</h1>
+</ng-template>

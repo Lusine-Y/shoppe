@@ -1,21 +1,21 @@
-.container{
-width: 100vw;
-height: 100vh;
-position:absolute;
-top:10%;
-left:10%;
-display: flex;
-flex-direction: column;
-row-gap: 80px;
+.container {
+	width: 100vw;
+	height: 100vh;
+	position: absolute;
+	top: 10%;
+	left: 10%;
+	display: flex;
+	flex-direction: column;
+	row-gap: 80px;
 
 }
 
-.firstSection{
-width: 100%;
-height: 60%;
-display:flex;
-flex-direction: row;
-column-gap: 80px;
+.firstSection {
+	width: 100%;
+	height: 60%;
+	display: flex;
+	flex-direction: row;
+	column-gap: 80px;
 
 }
 
@@ -24,24 +24,24 @@ column-gap: 80px;
 	height: 100%;
 	display: flex;
 	flex-direction: row;
-	
+
 }
 
-.leftColumn{
-  width: 40%;
+.leftColumn {
+	width: 40%;
 	height: 100%;
-	display:flex;
+	display: flex;
 	flex-direction: column;
 	row-gap: 28px;
 }
 
 .image {
-cursor: pointer;
-border-radius: 10px;
+	cursor: pointer;
+	border-radius: 10px;
 
 }
 
-.rightSide{
+.rightSide {
 	width: 30%;
 	height: 100%;
 	display: flex;
@@ -49,7 +49,7 @@ border-radius: 10px;
 	row-gap: 35px;
 }
 
-.btn{
+.btn {
 	border-top: none;
 	border-left: none;
 	border-right: none;
@@ -61,23 +61,24 @@ border-radius: 10px;
 	cursor: pointer;
 }
 
-.btn:hover { 
+.btn:hover {
 	color: black;
 }
-.text{
+
+.text {
 	color: #707070;
 	font-size: 16px;
 	width: 80%;
 }
 
 .box {
-	
+
 	display: flex;
 	row-gap: 30px;
 
 }
 
-.price{
+.price {
 	font-size: 20px;
 	color: #A18A68;
 	text-decoration: none;
@@ -85,7 +86,7 @@ border-radius: 10px;
 }
 
 
-.name{
+.name {
 	font-size: 26px;
 }
 
@@ -103,20 +104,20 @@ border-radius: 10px;
 	border-radius: 5px;
 }
 
-.icons{
+.icons {
 	display: flex;
 	column-gap: 30px;
 }
 
-.row{
+.row {
 
 	display: flex;
-column-gap: 10px;
+	column-gap: 10px;
 }
 
-.review{
-width: 50%;
-height: 50%;
+.review {
+	width: 50%;
+	height: 50%;
 	position: absolute;
 	left: 40%;
 	top: 100%;
@@ -135,112 +136,126 @@ height: 50%;
 	font-weight: 400;
 	border-radius: 5px;
 }
-input{
+
+input {
 
 	border-bottom: display 1px solid #707070;
 	border-left: none;
 	border-right: none;
 	border-top: none;
 	outline: none;
-border-color: #707070;
+	border-color: #707070;
 
 }
-.reviewInput{
-width: 80%;
+
+.reviewInput {
+	width: 80%;
 }
+
 .nameInput,
-.emailInput
-{
+.emailInput {
 	width: 80%;
 	padding-bottom: 3%;
-	}
+}
 
-	.cart{
-		width: 100%;
-		height: 40%;
-		display: flex;
-		flex-direction: row;
-		column-gap: 20px;
-	}
+.cart {
+	width: 100%;
+	height: 40%;
+	display: flex;
+	flex-direction: row;
+	column-gap: 20px;
+}
 
-.count{
-		width: 70%;
-		height: 100%;
-		display: flex;
-		align-items: center;
-		text-align: center;
+.count {
+	width: 70%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	text-align: center;
 
-	}
+}
 
 
-	.plus,
-	.minus{
-		width: 20%;
-		height: 200%;
-		border:none;
-		color:#707070;
-		cursor: pointer;
-	}
-
-	.reviews{
-		width: 60%;
-		height: 120%;
-		display: flex;
-		flex-direction: column;
-		row-gap: 15px;
-
-	}
-	.firstRow{
-		display: flex;
-		flex-direction: row;
-		column-gap: 20px;
-	}
-
-	.number{
+.plus,
+.minus {
 	width: 20%;
-	height: 200%; 
-	display:flex;
+	height: 200%;
+	border: none;
+	color: #707070;
+	cursor: pointer;
+}
+
+.reviews {
+	width: 60%;
+	height: 120%;
+	display: flex;
+	flex-direction: column;
+	row-gap: 15px;
+
+}
+
+.firstRow {
+	display: flex;
+	flex-direction: row;
+	column-gap: 20px;
+}
+
+.number {
+	width: 20%;
+	height: 200%;
+	display: flex;
 	justify-content: center;
 	align-items: center;
 	background-color: #EFEFEF;
-  font-size: 20px;
-	color:#707070
- }
+	font-size: 20px;
+	color: #707070
+}
 
- .secondSection{
+.secondSection {
 	width: 90%;
 
- }
+}
 
 
-.thirdSection{
+.thirdSection {
 	width: 100%;
-	height:30%;
-	display:flex;
+	height: 30%;
+	display: flex;
 	flex-direction: column;
 	row-gap: 30px;
 }
 
- .similarItems{
+.similarItems {
 	width: 90%;
 	height: 100%;
-display: flex;
-flex-direction: row;
-column-gap: 50px;
- }
+	display: flex;
+	flex-direction: row;
+	column-gap: 50px;
+}
 
- .card{
+.card {
 	display: flex;
 	flex-direction: column;
 	row-gap: 10px;
 	cursor: pointer;
- }
+}
 
-p{
+p {
 	font-size: 20px;
 	color: #A18A68;
 	text-decoration: none;
 }
- 
 
-	
+
+.heart {
+	font-size: 35px;
+	width: 40px;
+	height: 40px;
+	color: grey;
+	transition: color 0.3s ease;
+	cursor: pointer;
+
+	&.liked {
+		color: red;
+	}
+}

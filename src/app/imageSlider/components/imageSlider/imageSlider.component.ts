@@ -9,9 +9,9 @@ import { Router } from '@angular/router';
   styleUrls: ['./imageSlider.component.css'],
 })
 export class ImageSliderComponent implements OnInit, OnDestroy {
-  constructor(public mainService: MainService, private router: Router ) {}
+  constructor(public mainService: MainService, private router: Router) {}
 
-	products:IProducts[]=[];
+  products: IProducts[] = [];
   slides: IProducts[] = [];
   currentIndex: number = 0;
   timeoutId?: number;
@@ -55,5 +55,9 @@ export class ImageSliderComponent implements OnInit, OnDestroy {
 
   getCurrentSlideUrl() {
     return `url('${this.slides[this.currentIndex].imageUrl}')`;
+  }
+
+  getCurrentSlideId() {
+    return this.slides[this.currentIndex].id;
   }
 }

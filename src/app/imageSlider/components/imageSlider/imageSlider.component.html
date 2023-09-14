@@ -1,20 +1,22 @@
 <div class="slider">
   <div class="slide" [ngStyle]="{ 'background-image': getCurrentSlideUrl() }">
-    <span class = "name">
+    <span class="name">
       {{ slides[currentIndex].name }}
-		</span>
-    <span class = "price">${{ slides[currentIndex].price }}</span>
-		
-	<button  class="btn"
-		 [routerLink]="['/products']">View product</button>
+    </span>
+    <span class="price">${{ slides[currentIndex].price }}</span>
 
-  <div class="dotsContainer">
-    <div
-      *ngFor="let slide of slides; let slideIndex = index"
-      class="dot"
-      (click)="goToSlide(slideIndex)"
-    >
-      ●
+    <button class="btn" [routerLink]="['/products', getCurrentSlideId()]">
+      View product
+    </button>
+
+    <div class="dotsContainer">
+      <div
+        *ngFor="let slide of slides; let slideIndex = index"
+        class="dot"
+        (click)="goToSlide(slideIndex)"
+      >
+        ●
+      </div>
     </div>
   </div>
 </div>

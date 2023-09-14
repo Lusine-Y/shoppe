@@ -185,8 +185,8 @@ export class MainService {
         images: [
           '/assets/images/slider_image_3.png',
           'assets/images/Img 01 (1).png',
-					'assets/images/Img 04.png',
-					'assets/images/Img 02.png',
+          'assets/images/Img 04.png',
+          'assets/images/Img 02.png',
         ],
       },
 
@@ -223,8 +223,8 @@ export class MainService {
         images: [
           '/assets/images/slider_image_3.png',
           'assets/images/Img 01 (1).png',
-					'assets/images/Img 04.png',
-					'assets/images/Img 02.png',
+          'assets/images/Img 04.png',
+          'assets/images/Img 02.png',
         ],
       },
 
@@ -261,8 +261,8 @@ export class MainService {
         images: [
           '/assets/images/slider_image_3.png',
           'assets/images/Img 01 (1).png',
-					'assets/images/Img 04.png',
-					'assets/images/Img 02.png',
+          'assets/images/Img 04.png',
+          'assets/images/Img 02.png',
         ],
       },
 
@@ -299,8 +299,8 @@ export class MainService {
         images: [
           '/assets/images/slider_image_3.png',
           'assets/images/Img 01 (1).png',
-					'assets/images/Img 04.png',
-					'assets/images/Img 02.png',
+          'assets/images/Img 04.png',
+          'assets/images/Img 02.png',
         ],
       },
       {
@@ -336,8 +336,8 @@ export class MainService {
         images: [
           '/assets/images/slider_image_3.png',
           'assets/images/Img 01 (1).png',
-					'assets/images/Img 04.png',
-					'assets/images/Img 02.png',
+          'assets/images/Img 04.png',
+          'assets/images/Img 02.png',
         ],
       },
       {
@@ -373,8 +373,8 @@ export class MainService {
         images: [
           '/assets/images/slider_image_3.png',
           'assets/images/Img 01 (1).png',
-					'assets/images/Img 04.png',
-					'assets/images/Img 02.png',
+          'assets/images/Img 04.png',
+          'assets/images/Img 02.png',
         ],
       },
       {
@@ -408,10 +408,10 @@ export class MainService {
         ],
         similarItemIds: [11, 12, 13],
         images: [
-					'/assets/images/slider_image_3.png',
+          '/assets/images/slider_image_3.png',
           'assets/images/Img 01 (1).png',
-					'assets/images/Img 04.png',
-					'assets/images/Img 02.png',
+          'assets/images/Img 04.png',
+          'assets/images/Img 02.png',
         ],
       },
       {
@@ -447,8 +447,8 @@ export class MainService {
         images: [
           '/assets/images/slider_image_3.png',
           'assets/images/Img 01 (1).png',
-					'assets/images/Img 04.png',
-					'assets/images/Img 02.png',
+          'assets/images/Img 04.png',
+          'assets/images/Img 02.png',
         ],
       },
       {
@@ -482,10 +482,10 @@ export class MainService {
         ],
         similarItemIds: [11, 12, 13],
         images: [
-					'/assets/images/slider_image_3.png',
+          '/assets/images/slider_image_3.png',
           'assets/images/Img 01 (1).png',
-					'assets/images/Img 04.png',
-					'assets/images/Img 02.png',
+          'assets/images/Img 04.png',
+          'assets/images/Img 02.png',
         ],
       },
       {
@@ -521,8 +521,8 @@ export class MainService {
         images: [
           '/assets/images/slider_image_3.png',
           'assets/images/Img 01 (1).png',
-					'assets/images/Img 04.png',
-					'assets/images/Img 02.png',
+          'assets/images/Img 04.png',
+          'assets/images/Img 02.png',
         ],
       },
 
@@ -557,10 +557,10 @@ export class MainService {
         ],
         similarItemIds: [11, 12, 13],
         images: [
-					'/assets/images/slider_image_3.png',
+          '/assets/images/slider_image_3.png',
           'assets/images/Img 01 (1).png',
-					'assets/images/Img 04.png',
-					'assets/images/Img 02.png',
+          'assets/images/Img 04.png',
+          'assets/images/Img 02.png',
         ],
       },
 
@@ -597,8 +597,8 @@ export class MainService {
         images: [
           '/assets/images/slider_image_3.png',
           'assets/images/Img 01 (1).png',
-					'assets/images/Img 04.png',
-					'assets/images/Img 02.png',
+          'assets/images/Img 05.png',
+          'assets/images/Img 07.png',
         ],
       },
       {
@@ -632,10 +632,10 @@ export class MainService {
         ],
         similarItemIds: [11, 12, 13],
         images: [
-					'/assets/images/slider_image_3.png',
+          '/assets/images/slider_image_3.png',
           'assets/images/Img 01 (1).png',
-					'assets/images/Img 04.png',
-					'assets/images/Img 02.png',
+          'assets/images/Img 04 (1).png',
+          'assets/images/Img 04 (2).png',
         ],
       },
 
@@ -672,8 +672,8 @@ export class MainService {
         images: [
           '/assets/images/slider_image_3.png',
           'assets/images/Img 01 (1).png',
-					'assets/images/Img 04.png',
-					'assets/images/Img 02.png',
+          'assets/images/Img 04.png',
+          'assets/images/Img 02.png',
         ],
       },
       {
@@ -709,8 +709,8 @@ export class MainService {
         images: [
           '/assets/images/slider_image_3.png',
           'assets/images/Img 01 (1).png',
-					'assets/images/Img 04.png',
-					'assets/images/Img 02.png',
+          'assets/images/Img 04.png',
+          'assets/images/Img 02.png',
         ],
       },
     ];

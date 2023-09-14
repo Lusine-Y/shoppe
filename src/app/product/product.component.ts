@@ -19,8 +19,21 @@ export class ProductComponent implements OnInit {
     this.route.params.subscribe((params) => {
       const { productId } = params;
       this.product = this.mainService.getProductById(+productId);
+      this.mainImageUrl = this.product?.imageUrl!;
     });
   }
+
+
+	//addReview = new FormGroup ({
+  //   reviewText: new FormControl ('',Validators.required),
+	//	 name: new FormControl ('',Validators.required),
+	//	 email: new FormControl ('',Validators.required),
+  //   saveData: new FormControl (false),
+	//	 rate: new FormControl ([''],Validators.required)
+	//})
+
+
+
 
   onRatingChange(newRating: number): void {
     this.selectedRating = newRating;
@@ -29,9 +42,9 @@ export class ProductComponent implements OnInit {
   ngOnInit(): void {
     const productId = this.route.snapshot.paramMap.get('productId');
 
-		if (productId) {
+    if (productId) {
       this.product = this.mainService.getProductById(+productId);
-			this.mainImageUrl = this.product?.imageUrl! 
+      this.mainImageUrl = this.product?.imageUrl!;
     }
   }
 
